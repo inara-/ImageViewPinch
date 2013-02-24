@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="waC-AZ-yos">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="droid.gif" translatesAutoresizingMaskIntoConstraints="NO" id="iXa-yY-WND">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="336" id="qAN-Od-I2g"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iXa-yY-WND" firstAttribute="top" secondItem="waC-AZ-yos" secondAttribute="top" type="default" id="24G-9x-uVN"/>
+                                    <constraint firstItem="iXa-yY-WND" firstAttribute="bottom" secondItem="waC-AZ-yos" secondAttribute="bottom" type="default" id="ABH-Aq-Wm4"/>
+                                    <constraint firstItem="iXa-yY-WND" firstAttribute="centerY" secondItem="waC-AZ-yos" secondAttribute="centerY" type="default" id="mV7-ud-TfJ"/>
+                                    <constraint firstItem="iXa-yY-WND" firstAttribute="leading" secondItem="waC-AZ-yos" secondAttribute="leading" constant="-16" id="qPC-5v-if7"/>
+                                    <constraint firstItem="iXa-yY-WND" firstAttribute="trailing" secondItem="waC-AZ-yos" secondAttribute="trailing" type="default" id="v6u-gA-RfY"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="qxr-wS-7Kp"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="waC-AZ-yos" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="Rsp-fH-ozD"/>
+                            <constraint firstItem="waC-AZ-yos" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Yye-HB-ONF"/>
+                            <constraint firstAttribute="bottom" secondItem="waC-AZ-yos" secondAttribute="bottom" constant="34" id="ggs-hf-ICE"/>
+                            <constraint firstItem="waC-AZ-yos" firstAttribute="top" secondItem="3" secondAttribute="top" constant="77" id="njc-ec-2Wa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="iXa-yY-WND" id="PPl-V4-Gqw"/>
+                        <outlet property="myScrollView" destination="waC-AZ-yos" id="yky-hT-7Qu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="droid.gif" width="1024" height="768"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="myScrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
